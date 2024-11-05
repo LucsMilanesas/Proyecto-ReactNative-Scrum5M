@@ -1,10 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, ScrollView,TouchableOpacity } from 'react-native';
 
-export default function inicio(props) {
+export default function Inicio(props) {
   return (
     <ScrollView>
         <View>
+            <TouchableOpacity style={styles.boton} onPress={()=>props.navigation.navigate('categoria')}>
+                <Text style={styles.textoboton}> CATEGORIA</Text>
+            </TouchableOpacity>
+
             <TouchableOpacity style={styles.boton} onPress={()=>props.navigation.navigate('agregar')}>
                 <Text style={styles.textoboton}> AGREGAR</Text>
             </TouchableOpacity>
